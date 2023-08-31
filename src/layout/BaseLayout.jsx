@@ -34,7 +34,7 @@ export default function BaseLayout() {
   }, [winWidth]);
   return (
     <>
-      {!canPlay && <CompatibleScreen />}
+{/*       {!canPlay && <CompatibleScreen />} */}
 
       <NavigationBar />
       <div
