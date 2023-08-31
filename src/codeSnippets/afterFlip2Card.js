@@ -25,6 +25,8 @@ export const afterFlip2Card = async (
 	setTurn("wait");
 
 	if (chosenCard[0][0] == chosenCard[1][0]) {
+    await pause();
+    
 		switch (+chosenCard[0][0]) {
 			case 100:
 				setThrowBomb100(true);

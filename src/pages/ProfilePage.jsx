@@ -84,8 +84,8 @@ export default function ProfilePage() {
           backgroundColor: "rgba(0, 0, 0, 0.50)",
         }}
       >
-        <div className="flex flex-col lg:flex-row">
-          <div className="bg-[rgba(44,44,44,0.5)] my-[10%] ml-[10%] lg:w-72 lg:h-72 h-48 w-48 flex items-center justify-center rounded-md border-white border-2 relative">
+        <div className="flex flex-col lg:flex-row lg:items-center justify-center">
+          <div className="bg-[rgba(44,44,44,0.5)] ml-[10%] lg:w-72 lg:h-72 h-48 w-48 flex items-center justify-center rounded-md border-white border-2 relative">
             <div
               className="absolute bottom-[0.3rem] text-2xl font-bold italic text-[#ffab10]"
               style={{ textShadow: "0.5px 0.1px 5px" }}
@@ -94,7 +94,7 @@ export default function ProfilePage() {
             </div>
             <img className="" src={char} alt={profile?.selectedChar} />
           </div>
-          <div className="bg-[rgba(44,44,44,0.5)] my-[10%] ml-[10%] lg:w-72 lg:h-72 h-48 w-48 flex items-center justify-center rounded-md border-white border-2 relative">
+          <div className="bg-[rgba(44,44,44,0.5)] ml-[10%] lg:w-72 lg:h-72 h-48 w-48 flex items-center justify-center rounded-md border-white border-2 relative">
             <div
               className="absolute bottom-[0.3rem] text-2xl font-bold italic text-[#ffb800]"
               style={{ textShadow: "0.5px 0.1px 5px" }}
@@ -109,7 +109,7 @@ export default function ProfilePage() {
           </div>
         </div>
         <div
-          className="text-[rgba(255,255,255,0.9)] p-[25px] text-[1.2rem] font-semibold flex flex-col justify-center pl-[3vw] w-full  "
+          className="text-[rgba(255,255,255,0.9)] p-[25px] text-[1.2rem] font-semibold flex flex-col justify-center pl-[3vw] w-full"
           style={{
             background:
               "linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.560749299719888) 100%)",
