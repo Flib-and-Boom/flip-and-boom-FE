@@ -10,7 +10,7 @@ export default {
 				lumayan3: "lumayan3 1888ms infinite ease-in-out",
 				lumayan4: "lumayan4 1888ms infinite ease-in-out",
 				attackBomb: "attackBomb 2789ms linear",
-        attackBombSelf: "attackBombSelf 2789ms linear infinite"
+        attackBombSelf: "attackBombSelf 2789ms linear"
 			},
 			keyframes: {
 				attackBomb: {
@@ -24,6 +24,9 @@ export default {
 					"100%": {
 						transform: "translateX(78rem) rotate(880deg) scale(1)",
 					},
+          // "100%": {
+					// 	transform: "translateX(50cqw) rotate(880deg) scale(1)",
+					// },
 				},
 				attackBombSelf: {
 					"20%": {

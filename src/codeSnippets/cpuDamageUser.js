@@ -15,6 +15,8 @@ export const cpuDamageUser = async (
 	setThrowSound,
 
 ) => {
+  await  pause();
+  
 	switch (casee) {
 		case 100:
 			setThrowBombSelf100(true);

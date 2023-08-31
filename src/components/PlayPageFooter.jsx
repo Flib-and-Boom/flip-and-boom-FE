@@ -75,9 +75,9 @@ export default function PlayPageFooter({
           setTurn={setTurn}
 				/>
 			)}
-			<div className="w-full h-24 pt-5 flex flex-col">
-				<div className="w-full border-t-2 border-t-[#D98F00]"></div>
-				<div className="flex justify-between px-20 items-center h-full">
+			<div className="w-full h-24 mt-5 flex flex-col flex-1 justify-center">
+				<div className="w-full"></div>
+				<div className="flex justify-between px-20 items-center h-full border-t-[#D98F00] border-t-2 pt-2">
 					<div
 						className="flex font-semibold text-2xl"
 						style={{ textShadow: "0.5px 0.1px 5px" }}
