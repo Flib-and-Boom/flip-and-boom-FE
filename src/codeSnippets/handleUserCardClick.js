@@ -46,9 +46,9 @@ export const handleUserCardClick = async (
 	}
 
 	if (value == "bomb") {
-		setBoomSelf(true);
-
 		setTurn("wait");
+
+		setBoomSelf(true);
 
 		await pause(900);
 

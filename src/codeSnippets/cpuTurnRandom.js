@@ -33,16 +33,15 @@ export const cpuTurnRandom = async ({
   setThrowBombSelf210,
   setThrowBombSelf220,
   setThrowBombSelf250,
-  setThrowSound
+  setThrowSound,
 }) => {
   if (skipTurn) {
-    setTurn("user");
+    await setTurn("user");
 
-    setSkipTurn(false);
+    await setSkipTurn(false);
 
     return;
   }
-
 
   const enemyCards = [];
 
