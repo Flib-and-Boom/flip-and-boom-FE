@@ -14,34 +14,31 @@ export default {
 			},
 			keyframes: {
 				attackBomb: {
-					"20%": { transform: "translateX(15.6rem) rotate(180deg) scale(1.5)" },
-					"40%": { transform: "translateX(31.2rem) rotate(360deg) scale(2)" },
-					"50%": { transform: "translateX(39rem) rotate(440deg) scale(2.25)" },
-					"60%": { transform: "translateX(46.8rem) rotate(520deg) scale(2)" },
+					"20%": { transform: "translateX(14.4cqw) rotate(180deg) scale(1.5)" },
+					"40%": { transform: "translateX(28.8cqw) rotate(360deg) scale(2)" },
+					"50%": { transform: "translateX(36cqw) rotate(440deg) scale(2.25)" },
+					"60%": { transform: "translateX(43.2cqw) rotate(520deg) scale(2)" },
 					"80%": {
-						transform: "translateX(62.4rem) rotate(700deg) scale(1.5)",
+						transform: "translateX(56.4cqw) rotate(700deg) scale(1.5)",
 					},
-					"100%": {
-						transform: "translateX(78rem) rotate(880deg) scale(1)",
+          "100%": {
+						transform: "translateX(72cqw) rotate(880deg) scale(1)",
 					},
-          // "100%": {
-					// 	transform: "translateX(50cqw) rotate(880deg) scale(1)",
-					// },
 				},
 				attackBombSelf: {
 					"20%": {
-						transform: "translateX(-15.6rem) rotate(-180deg) scale(1.5)",
+						transform: "translateX(-14.4cqw) rotate(-180deg) scale(1.5)",
 					},
-					"40%": { transform: "translateX(-31.2rem) rotate(-360deg) scale(2)" },
+					"40%": { transform: "translateX(-28.8cqw) rotate(-360deg) scale(2)" },
 					"50%": {
-						transform: "translateX(-39rem) rotate(-440deg) scale(2.25)",
+						transform: "translateX(-36cqw) rotate(-440deg) scale(2.25)",
 					},
-					"60%": { transform: "translateX(-46.8rem) rotate(-520deg) scale(2)" },
+					"60%": { transform: "translateX(-43.2cqw) rotate(-520deg) scale(2)" },
 					"80%": {
-						transform: "translateX(-62.4rem) rotate(-700deg) scale(1.5)",
+						transform: "translateX(-56.4cqw) rotate(-700deg) scale(1.5)",
 					},
 					"100%": {
-						transform: "translateX(-78rem) rotate(-880deg) scale(1)",
+						transform: "translateX(-72cqw) rotate(-880deg) scale(1)",
 					},
 				},
 				spinX: {

@@ -45,6 +45,7 @@ export default function PlayPage() {
   const [totalTurn, setTotalTurn] = useState(0);
   const [showGameResult, setShowGameResult] = useState(false);
   const [skipTurn, setSkipTurn] = useState(false);
+  const [prevTurn, setPrevTurn] = useState("");
 
   const [throwBomb100, setThrowBomb100] = useState(false);
   const [throwBomb125, setThrowBomb125] = useState(false);
@@ -132,20 +133,8 @@ export default function PlayPage() {
     setThrowBombSelf210,
     setThrowBombSelf220,
     setThrowBombSelf250,
-	setThrowSound
+    setThrowSound,
   };
-
-  // created lifecycle
-  useEffect(() => {
-    gameMode == "HOME" && navigate("/home");
-
-    createdLifecycle(setBoard);
-
-    (async () => {
-      await pause();
-      setTurn("user");
-    })();
-  }, []);
 
   // watcher for chosenCard useState
   useEffect(() => {
@@ -170,13 +159,28 @@ export default function PlayPage() {
         setThrowBomb220,
         setThrowBomb250,
         setWobbleCpu,
-        setThrowSound
+        setThrowSound,
+        skipTurn
       );
   }, [chosenCard]);
 
   // watcher for turn useState
   useEffect(() => {
-    setTotalTurn(totalTurn + 1);
+    if (hp <= 0 || enemyHp <= 0) return;
+
+    if ((turn == "user" && prevTurn == "cpuwait") || turn == "cpu") {
+      setTotalTurn(totalTurn + 1);
+    }
+
+    setPrevTurn(turn);
+
+    if (totalTurn == 0) {
+      gameMode == "HOME" && navigate("/home");
+
+      createdLifecycle(setBoard);
+
+      setTotalTurn(totalTurn + 1);
+    }
 
     if (turn == "cpu") {
       switch (gameMode) {
