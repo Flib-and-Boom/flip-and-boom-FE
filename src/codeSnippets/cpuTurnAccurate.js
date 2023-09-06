@@ -36,16 +36,14 @@ export const cpuTurnAccurate = async ({
 	setThrowSound,
 }) => {
 	if (skipTurn) {
-		setTurn("user");
+		await setTurn("user");
 
-		setSkipTurn(false);
+		await setSkipTurn(false);
 
 		return;
 	}
 
 	const enemyCards = [];
-	// console.log(enemyCards);
-	console.log(board);
 
 	const clonedAiMemory = structuredClone(aiMemory);
 

@@ -69,113 +69,100 @@ export default function PlayPageHeader({
 		},
 	});
 
-	// this const to rerender
+	// ignore this const, for re-rendering purpose only
 	const abc = hp + 100;
+	const def = enemyHp + 100;
 
 	useEffect(() => {
 		setHp(1000), setEnemyHp(1000);
 	}, []);
 
 	return (
-		<div
-			className="flex h-32 mx-auto justify-between text-white italic font-bold relative w-[84.1rem] flex-1 items-end"
-			// style={{ containerType: "size"}}
-		>
+		<div className="flex mx-auto justify-between text-white italic font-bold relative w-[92.5%] flex-1 items-center">
 			{throwBomb100 && (
-				<div className="absolute w-24 left-0 animate-attackBomb mb-4">
+				<div className="absolute w-24 left-[8%] animate-attackBomb z-50">
 					<img src={bomb100} className="" />
 				</div>
 			)}
 			{throwBomb125 && (
-				<div className="absolute w-24 left-0 animate-attackBomb mb-4 ml-2">
+				<div className="absolute w-24 left-[8%] animate-attackBomb">
 					<img src={bomb125} className="" />
 				</div>
 			)}
 			{throwBomb150 && (
-				<div className="absolute w-24 left-0 animate-attackBomb mb-4 ml-2">
+				<div className="absolute w-24 left-[8%] animate-attackBomb">
 					<img src={bomb150} className="" />
 				</div>
 			)}
 			{throwBomb175 && (
-				<div className="absolute w-24 left-0 animate-attackBomb mb-4 ml-2">
+				<div className="absolute w-24 left-[8%] animate-attackBomb">
 					<img src={bomb175} className="" />
 				</div>
 			)}
 			{throwBomb200 && (
-				<div className="absolute w-24 left-0 animate-attackBomb mb-4 ml-2">
+				<div className="absolute w-24 left-[8%] animate-attackBomb">
 					<img src={bomb200} className="" />
 				</div>
 			)}
 			{throwBomb210 && (
-				<div className="absolute w-24 left-0 animate-attackBomb mb-4 ml-2">
+				<div className="absolute w-24 left-[8%] animate-attackBomb">
 					<img src={bomb210} className="" />
 				</div>
 			)}
 			{throwBomb220 && (
-				<div className="absolute w-24 left-0 animate-attackBomb mb-4 ml-2">
+				<div className="absolute w-24 left-[8%] animate-attackBomb">
 					<img src={bomb220} className="" />
 				</div>
 			)}
 			{throwBomb250 && (
-				<div className="absolute w-24 left-0 animate-attackBomb mb-4 ml-2">
+				<div className="absolute w-24 left-[8%] animate-attackBomb">
 					<img src={bomb250} className="" />
 				</div>
 			)}
 
 			{throwBombSelf100 && (
-				<div className="absolute w-24 right-0 animate-attackBombSelf mb-4 ml-2">
+				<div className="absolute w-24 right-[8%] animate-attackBombSelf">
 					<img src={bomb100} className="" />
 				</div>
 			)}
 			{throwBombSelf125 && (
-				<div className="absolute w-24 right-0 animate-attackBombSelf mb-4 ml-2">
+				<div className="absolute w-24 right-[8%] animate-attackBombSelf">
 					<img src={bomb125} className="" />
 				</div>
 			)}
 			{throwBombSelf150 && (
-				<div className="absolute w-24 right-0 animate-attackBombSelf mb-4 ml-2">
+				<div className="absolute w-24 right-[8%] animate-attackBombSelf">
 					<img src={bomb150} className="" />
 				</div>
 			)}
 			{throwBombSelf175 && (
-				<div className="absolute w-24 right-0 animate-attackBombSelf mb-4 ml-2">
+				<div className="absolute w-24 right-[8%] animate-attackBombSelf">
 					<img src={bomb175} className="" />
 				</div>
 			)}
 			{throwBombSelf200 && (
-				<div className="absolute w-24 right-0 animate-attackBombSelf mb-4 ml-2">
+				<div className="absolute w-24 right-[8%] animate-attackBombSelf">
 					<img src={bomb200} className="" />
 				</div>
 			)}
 			{throwBombSelf210 && (
-				<div className="absolute w-24 right-0 animate-attackBombSelf mb-4 ml-2">
+				<div className="absolute w-24 right-[8%] animate-attackBombSelf">
 					<img src={bomb210} className="" />
 				</div>
 			)}
 			{throwBombSelf220 && (
-				<div className="absolute w-24 right-0 animate-attackBombSelf mb-4 ml-2">
+				<div className="absolute w-24 right-[8%] animate-attackBombSelf">
 					<img src={bomb220} className="" />
 				</div>
 			)}
 			{throwBombSelf250 && (
-				<div className="absolute w-24 right-0 animate-attackBombSelf mb-4 ml-2">
+				<div className="absolute w-24 right-[8%] animate-attackBombSelf">
 					<img src={bomb250} className="" />
 				</div>
 			)}
 
-			{boom && (
-				<div className="absolute right-0 w-24 z-50 animate__animated animate__zoomIn scale-[1.75] mb-8 mr-3">
-					<img src={explosion} className="" />
-				</div>
-			)}
-			{boomSelf && (
-				<div className="absolute left-0 w-24 z-50 animate__animated animate__zoomIn scale-[1.75] mb-8 ml-3">
-					<img src={explosion} className="" />
-				</div>
-			)}
-
 			{turn == "user" ? (
-				<div className="absolute -left-24 flex flex-col items-center text-xl animate__animated animate__bounceIn gap-y-[0.35rem] mb-7">
+				<div className="flex flex-col items-center text-xl animate__animated animate__bounceIn gap-y-[0.35rem] w-[5.7%]">
 					<div>
 						<i
 							className="fa-solid fa-circle-right text-2xl animate-spinX"
@@ -185,7 +172,7 @@ export default function PlayPageHeader({
 					<div>Your Turn</div>
 				</div>
 			) : (
-				<div className="absolute -left-24 flex flex-col items-center text-xl animate__animated animate__bounceOut gap-y-[0.35rem] mb-7">
+				<div className="flex flex-col items-center text-xl animate__animated animate__bounceOut gap-y-[0.35rem] w-[5.7%]">
 					<div>
 						<i
 							className="fa-solid fa-circle-right text-2xl animate-spinX"
@@ -196,54 +183,40 @@ export default function PlayPageHeader({
 				</div>
 			)}
 
-			{turn == "cpu" ? (
-				<div className="absolute -right-24 flex flex-col items-center text-xl animate__animated animate__bounceIn gap-y-[0.35rem] mb-7">
-					<div>
-						<i
-							className="fa-solid fa-circle-left text-2xl animate-spinX"
-							style={{ color: "#D98F00" }}
-						></i>
-					</div>
-					<div>CPU Turn</div>
+			<div className="w-[10%] flex justify-center items-center">
+				<div className="w-[81.5%] relative flex items-center justify-center">
+					<img
+						src={
+							profile?.selectedChar == "mr-king"
+								? mrKing
+								: profile?.selectedChar == "mrs-party"
+								? mrsParty
+								: profile?.selectedChar == "azure-explosiomancer"
+								? azureExplosiomancer
+								: profile?.selectedChar == "crimson-specter"
+								? crimsonSpecter
+								: profile?.selectedChar == "normal-guy"
+								? normalGuy
+								: profile?.selectedChar == "owen"
+								? owen
+								: profile?.selectedChar == "smoldering-detonation"
+								? smolderingDetonation
+								: profile?.selectedChar == "vampiric-blaster"
+								? vampiricBlaster
+								: defaultChar
+						}
+						className={`${wobbleSelf && "animate__animated animate__wobble"} ${
+							shakeSelf && "animate__animated animate__shakeX"
+						} rotate-[10deg]`}
+					/>
+					{boomSelf && (
+						<div className="absolute z-50 animate__animated animate__zoomIn scale-150">
+							<img src={explosion} className="" />
+						</div>
+					)}
 				</div>
-			) : turn == "cpuwait" ? (
-				<div className="absolute -right-24 flex flex-col items-center text-xl animate__animated animate__bounceOut gap-y-[0.35rem] mb-7">
-					<div>
-						<i
-							className="fa-solid fa-circle-left text-2xl animate-spinX"
-							style={{ color: "#D98F00" }}
-						></i>
-					</div>
-					<div>CPU Turn</div>
-				</div>
-			) : null}
-			<div className="w-32 h-32 relative">
-				<img
-					src={
-						profile?.selectedChar == "mr-king"
-							? mrKing
-							: profile?.selectedChar == "mrs-party"
-							? mrsParty
-							: profile?.selectedChar == "azure-explosiomancer"
-							? azureExplosiomancer
-							: profile?.selectedChar == "crimson-specter"
-							? crimsonSpecter
-							: profile?.selectedChar == "normal-guy"
-							? normalGuy
-							: profile?.selectedChar == "owen"
-							? owen
-							: profile?.selectedChar == "smoldering-detonation"
-							? smolderingDetonation
-							: profile?.selectedChar == "vampiric-blaster"
-							? vampiricBlaster
-							: defaultChar
-					}
-					className={`${wobbleSelf && "animate__animated animate__wobble"} ${
-						shakeSelf && "animate__animated animate__shakeX"
-					} rotate-[10deg]`}
-				/>
 			</div>
-			<div className="flex flex-col justify-end pb-7">
+			<div className="flex flex-col justify-end w-[29.3%]">
 				<div className="text-2xl flex justify-between px-4 mb-1">
 					<div className="flex">
 						HP :{" "}
@@ -253,7 +226,7 @@ export default function PlayPageHeader({
 					</div>
 					<div>{profile?.username?.toUpperCase()}</div>
 				</div>
-				<div className="h-6 w-[25rem] bg-black rounded-2xl border">
+				<div className="h-6 w-full bg-black rounded-2xl border">
 					<div
 						className="h-full rounded-2xl duration-1000"
 						style={{
@@ -265,8 +238,10 @@ export default function PlayPageHeader({
 					></div>
 				</div>
 			</div>
-			<div className="flex items-end pb-[1.375rem] text-7xl">VS</div>
-			<div className="flex flex-col justify-end pb-7">
+
+			<div className="flex items-end text-7xl w-[10%] justify-center">VS</div>
+
+			<div className="flex flex-col justify-end w-[29.3%]">
 				<div className="text-2xl flex justify-between px-4 mb-1">
 					<div>{gameMode}</div>
 					<div className="flex">
@@ -276,7 +251,7 @@ export default function PlayPageHeader({
 						</animated.div>
 					</div>
 				</div>
-				<div className="h-6 w-[25rem] bg-black rounded-2xl border">
+				<div className="h-6 w-full bg-black rounded-2xl border">
 					<div
 						className="h-full rounded-2xl duration-1000"
 						style={{
@@ -292,22 +267,56 @@ export default function PlayPageHeader({
 					></div>
 				</div>
 			</div>
-			<div className="w-32 h-32" style={{ transform: "scaleX(-1)" }}>
-				<img
-					src={
-						gameMode == "IMPOSSIBLE"
-							? mrKing
-							: gameMode == "HARD"
-							? mrsParty
-							: gameMode == "MEDIUM"
-							? smolderingDetonation
-							: defaultChar
-					}
-					className={`${wobbleCpu && "animate__animated animate__wobble"} ${
-						shakeCpu && "animate__animated animate__shakeX"
-					} rotate-[10deg]`}
-				/>
+			<div className="w-[10%] flex justify-center items-center">
+				<div className="w-[81.5%] relative flex items-center justify-center">
+					<img
+						src={
+							gameMode == "IMPOSSIBLE"
+								? mrKing
+								: gameMode == "HARD"
+								? mrsParty
+								: gameMode == "MEDIUM"
+								? smolderingDetonation
+								: defaultChar
+						}
+						className={`${
+							wobbleCpu && "animate__animated animate__wobble scale-x-[-1]"
+						} ${
+							shakeCpu && "animate__animated animate__shakeX scale-x-[-1]"
+						} scale-x-[-1]`}
+						// style={{ transform: "scaleX(-1) rotate(10deg)" }}
+					/>
+					{boom && (
+						<div className="absolute z-50 animate__animated animate__zoomIn scale-150">
+							<img src={explosion} className="" />
+						</div>
+					)}
+				</div>
 			</div>
+
+			{turn == "cpu" ? (
+				<div className="flex flex-col items-center text-xl animate__animated animate__bounceIn gap-y-[0.35rem] w-[5.7%]">
+					<div>
+						<i
+							className="fa-solid fa-circle-left text-2xl animate-spinX"
+							style={{ color: "#D98F00" }}
+						></i>
+					</div>
+					<div>CPU Turn</div>
+				</div>
+			) : turn == "cpuwait" ? (
+				<div className="flex flex-col items-center text-xl animate__animated animate__bounceOut gap-y-[0.35rem] w-[5.7%]">
+					<div>
+						<i
+							className="fa-solid fa-circle-left text-2xl animate-spinX"
+							style={{ color: "#D98F00" }}
+						></i>
+					</div>
+					<div>CPU Turn</div>
+				</div>
+			) : (
+				<div className="w-[5.7%]"> </div>
+			)}
 		</div>
 	);
 }

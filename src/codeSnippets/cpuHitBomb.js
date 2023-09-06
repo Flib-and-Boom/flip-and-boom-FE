@@ -10,8 +10,6 @@ export const cpuHitBomb = async (
 	board,
 	setBoard
 ) => {
-	await pause();
-
 	setBoom(true);
 
 	await pause(900);
